@@ -1,16 +1,6 @@
 'use client'
-
-import { CHAIN } from "@/lib/constants";
-import { PrivyClientConfig, PrivyProvider } from "@privy-io/react-auth";
-
-export const privyConfig: PrivyClientConfig = {
-    appearance: { theme: "light", accentColor: "#FA9866" },
-    defaultChain: CHAIN,
-    supportedChains: [CHAIN],
-    embeddedWallets: {
-        createOnLogin: "users-without-wallets",
-    },
-};
+import { privyConfig } from "@/lib/privy/config";
+import { PrivyProvider } from "@privy-io/react-auth";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
     return <PrivyProvider
