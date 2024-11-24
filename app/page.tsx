@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div>
       <button onClick={login} disabled={!enableLogin}>Login</button>
+      dev
     </div>
   );
 }
